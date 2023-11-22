@@ -14,7 +14,7 @@ SEARCH.addEventListener('keyup', (event) => {
     groceryArray.forEach((grocery) => {
         let groceryName = grocery.firstElementChild.textContent;
         // convert all of our text to lowercase
-        groceryNameLower = groceryName.toLowerCase();
+        let groceryNameLower = groceryName.toLowerCase();
         // now we can use indexOf to see if our text can be found within our grocery name. If nothing is found, a value of -1 is returned
         // note: we frame it this way because if we don't then the names won't come back after we delete our input box
         if(groceryNameLower.indexOf(text) == -1) {
@@ -22,10 +22,7 @@ SEARCH.addEventListener('keyup', (event) => {
         } else {
             grocery.style.display = 'block';
         }
-
-
     })
-
 })
 
 
